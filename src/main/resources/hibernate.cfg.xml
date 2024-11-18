@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        
+        <!-- Hibernate Dialect for MySQL database -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        
+        <!-- JDBC Driver class for MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        
+        <!-- JDBC URL for the MySQL database -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tp_hibernate</property>
+        
+        <!-- Database username for authentication -->
+        <property name="hibernate.connection.username">marouane</property>
+        
+        <!-- Database password for authentication -->
+        <property name="hibernate.connection.password">Marouane@2001</property>
+        
+        <!-- Hibernate's action for schema generation (use 'update' to auto-update schema) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- Enable SQL logging -->
+        <property name="show_sql">true</property>
+
+        <!-- Optional: Hibernate's setting for SQL formatting -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Optional: Disable the second-level cache -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
+        <!-- Optional: Disable query cache -->
+        <property name="hibernate.cache.use_query_cache">false</property>
+
+
+        <mapping class="org.marouanedbibih.model.User"/>
+
+
+    </session-factory>
+</hibernate-configuration>
